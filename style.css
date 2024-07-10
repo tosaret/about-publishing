@@ -203,7 +203,7 @@ header nav img {
   content: "";
   width: 365px;
   height: 50px;
-  background: url(/assets/images/desktop/paint-brush.svg) center no-repeat;
+  background: url(assets/images/desktop/paint-brush.svg) center no-repeat;
 }
 
 .kontakt .hero .hero-text::after {
