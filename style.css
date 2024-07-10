@@ -1,0 +1,810 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto&display=swap");
+
+:root {
+  --light-green: rgb(255, 253, 241);
+  --bright-green: rgb(209, 218, 74);
+  --green: rgb(208, 217, 75);
+  --button: rgb(229, 235, 178);
+  --dark-blue: rgb(0, 39, 60);
+  --gray: rgb(236, 236, 236);
+  --haus-bg: rgb(246, 243, 238);
+  --haus-text: rgb(71, 62, 73);
+  --garten-bg: rgb(239, 240, 235);
+  --garten-text: rgb(75, 135, 100);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+.btn-green {
+  display: inline-block;
+  background-color: var(--green);
+  border-radius: 24px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  padding: 10px 25px;
+}
+
+.btn-garten {
+  display: inline-block;
+  background-color: var(--garten-text);
+  color: #fff;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 15px;
+}
+
+.btn-haus {
+  display: inline-block;
+  background-color: var(--haus-text);
+  color: #fff;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 15px;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  border-bottom: 1px solid var(--gray);
+}
+
+.home header,
+.kontakt header {
+  background-color: var(--light-green);
+  border: none;
+}
+
+header .menu {
+  padding: 36px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 31px;
+}
+
+header nav ul,
+header nav li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav li {
+  position: relative;
+}
+
+header nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+header nav li:hover ul {
+  display: block;
+}
+
+header nav ul ul li {
+  margin: 10px 0;
+}
+
+header .menu-btn {
+  display: none;
+}
+
+header nav a {
+  display: block;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: var(--bright-green);
+}
+
+header nav img {
+  display: none;
+}
+
+.home .hero,
+.kontakt .hero {
+  position: relative;
+  background-color: var(--light-green);
+  padding: 45px 0 30px;
+}
+
+.kontakt .hero {
+  background: var(--light-green) url(assets/images/desktop/pattern.svg) left
+    45vw center no-repeat;
+  background-size: auto 100%;
+  padding: 100px 0 120px;
+}
+
+.garten .hero {
+  background: var(--garten-bg)
+    url(assets/images/desktop/artboard-gartenjournal.svg) left 48vw top 120px
+    no-repeat;
+  background-size: auto 50%;
+  padding: 45px 0;
+}
+
+.haus .hero {
+  background: var(--haus-bg) url(assets/images/desktop/artboard-hausjournal.svg)
+    left 46vw top 50px no-repeat;
+  background-size: auto 80%;
+  padding: 45px 0;
+}
+
+.haus .hero .atf-image,
+.garten .hero .atf-image {
+  display: none;
+}
+
+.home .hero::after {
+  position: absolute;
+  bottom: -45px;
+  left: calc(50% - 147px);
+  content: url(assets/images/desktop/arrow.png);
+  width: 113px;
+  height: 103px;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero .hero-text {
+  position: relative;
+  width: 50%;
+}
+
+.hero .hero-text::after {
+  position: absolute;
+  right: 0;
+  bottom: calc(50% - 60px);
+  display: block;
+  content: "";
+  width: 365px;
+  height: 50px;
+  background: url(/assets/images/desktop/paint-brush.svg) center no-repeat;
+}
+
+.kontakt .hero .hero-text::after {
+  width: 272px;
+  height: 37px;
+  left: 0;
+  top: 70px;
+}
+
+.haus .hero .hero-text::after,
+.garten .hero .hero-text::after {
+  display: none;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  letter-spacing: 1.7px;
+  line-height: 66px;
+  color: var(--dark-blue);
+  margin: 25px 0 42px;
+  max-width: 450px;
+}
+
+.kontakt .hero h1 {
+  margin: 0 0 15px;
+}
+
+.garten .hero h1 {
+  margin: 25px 0 40px;
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--garten-text);
+}
+
+.haus .hero h1 {
+  margin: 25px 0 40px;
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--haus-text);
+}
+
+.hero h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 0.8px;
+  line-height: 40px;
+  margin: 0 0 30px;
+  color: var(--dark-blue);
+}
+
+.hero p {
+  color: var(--dark-blue);
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0 0 40px;
+}
+
+.hero .hero-img {
+  width: 50%;
+}
+
+.hero img {
+  max-width: 840px;
+  position: relative;
+  right: -5%;
+}
+
+.haus .hero .logo,
+.garten .hero .logo {
+  max-width: 225px;
+  right: auto;
+}
+
+.uber-uns {
+  margin: 87px 0 47px;
+  text-align: center;
+}
+
+.uber-uns h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--dark-blue);
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.uber-uns p {
+  max-width: 857px;
+  margin: 14px auto 0;
+  line-height: 26px;
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  line-height: 26px;
+  padding: 0;
+}
+
+.features strong {
+  display: block;
+  margin: 0 0 3px;
+}
+
+.features .container > div {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.features .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--button);
+  border-radius: 12.6px;
+  margin: 0 auto 20px;
+}
+
+.visionen {
+  margin: 80px 0 52px;
+  padding: 35px 0 0;
+  background: url(assets/images/desktop/pattern.svg) left -130px center no-repeat;
+  background-size: auto 100%;
+  background-color: var(--light-green);
+}
+
+.visionen .container {
+  display: grid;
+  grid-template-columns: 45.2% 54.8%;
+  align-items: center;
+}
+
+.visionen .bg-image {
+  width: 260px;
+  height: 415px;
+  background: url(assets/images/desktop/iphone-hausjournal.png) top center
+    no-repeat;
+  background-size: 100%;
+}
+
+.visionen h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--dark-blue);
+  letter-spacing: 1px;
+  margin: 0 0 20px;
+}
+
+.visionen p {
+  max-width: 500px;
+  margin: 0 0 40px;
+}
+
+.partners h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--dark-blue);
+  letter-spacing: 1px;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.partners .logos {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.partners .logos img {
+  height: 53px;
+  width: auto;
+}
+
+footer {
+  padding: 50px 0;
+  border-top: 1px solid var(--gray);
+}
+
+.footer-menu {
+  margin: 20px 0 0;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.footer-menu a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 40px 0 0;
+}
+
+.footer-menu a:hover {
+  color: var(--bright-green);
+}
+
+.impressum {
+  padding: 50px 0;
+}
+
+.impressum h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 1.7px;
+  line-height: 50px;
+  color: var(--dark-blue);
+  margin: 0 0 20px;
+}
+
+.impressum strong {
+  font-weight: 600;
+}
+
+.projekte h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 1.1px;
+  line-height: 50px;
+  color: var(--dark-blue);
+  margin: 50px 0 15px;
+  text-align: center;
+}
+
+.projekte p {
+  text-align: center;
+  line-height: 26px;
+  max-width: 860px;
+  margin: 0 auto 40px;
+}
+
+.projekte-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 49% 49%;
+  margin: 0 0 50px;
+}
+
+.projekte-grid > div {
+  border-radius: 12px;
+  text-align: center;
+  padding: 110px 0 28px;
+}
+
+.projekte-grid > div:first-child {
+  background-color: var(--garten-bg);
+  background-image: url(assets/images/desktop/artboard-gartenjournal.svg);
+  background-position: right 25px top 20px;
+  background-repeat: no-repeat;
+  background-size: 40% auto;
+}
+
+.projekte-grid > div:last-child {
+  background-color: var(--haus-bg);
+  background-image: url(assets/images/desktop/artboard-hausjournal.svg);
+  background-position: center top 60px;
+  background-repeat: no-repeat;
+  background-size: 92% auto;
+}
+
+.projekte-grid > div a {
+  display: block;
+}
+
+.projekte-grid > div img {
+  max-width: 92%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.projekte-grid > div .logo {
+  margin: 25px auto 0;
+  max-width: 50%;
+}
+
+.project {
+  padding: 50px 0;
+}
+
+.project .container {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: 49% 49%;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project h3 {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 0.9px;
+  margin: 0 0 18px;
+}
+
+.project p {
+  max-width: 450px;
+  line-height: 26px;
+  margin: 0 0 25px;
+}
+
+.project .label {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 13px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.project hr {
+  margin: 11px 0;
+  max-width: 350px;
+}
+
+.project .socials {
+  margin: 25px 0;
+}
+
+.project .socials a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+.project .socials img {
+  width: 42px;
+  height: 42px;
+}
+
+@media (max-width: 767px) {
+  nav {
+    display: none;
+    background: #fff;
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    width: 75vw;
+    height: 100%;
+    padding: 15vw;
+  }
+  nav.shown {
+    display: block;
+  }
+  header nav img {
+    display: block;
+    width: 15px;
+    position: absolute;
+    top: 6vw;
+    right: 8vw;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li ul {
+    display: none !important;
+  }
+  nav a {
+    text-transform: capitalize !important;
+  }
+  header .menu-btn {
+    display: block;
+  }
+  .menu-btn img {
+    width: 15px;
+    cursor: pointer;
+  }
+  .container {
+    padding: 0 30px;
+  }
+  .menu {
+    padding: 20px 0 !important;
+  }
+  .menu a img {
+    max-width: 168px;
+  }
+  .hero {
+    text-align: center;
+    padding: 30px 0 !important;
+  }
+  .home .hero::after {
+    width: 68px;
+    height: 62px;
+    transform: scale(0.5);
+    bottom: -30px;
+    left: calc(50% - 60px);
+  }
+  .hero h1 {
+    font-size: 33px;
+    line-height: 40px;
+    max-width: 280px;
+    margin: 0 auto 20px;
+  }
+  .hero .container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .hero .hero-img,
+  .hero .hero-text {
+    width: 100%;
+    max-width: 320px;
+  }
+  .hero .hero-text::after {
+    right: 20px;
+    width: 184px;
+    height: 25px;
+    top: calc(50% - 10px);
+  }
+  .hero .hero-text p {
+    max-width: 320px;
+    margin: 0 auto 20px;
+  }
+  .hero .hero-text p br {
+    display: none;
+  }
+  .hero img {
+    max-width: 100%;
+    right: auto;
+  }
+  .uber-uns {
+    margin: 50px 0;
+  }
+  .uber-uns h2 {
+    font-size: 26px;
+    line-height: 37px;
+  }
+  .visionen {
+    background-size: auto 250px;
+    background-position: top 15% center;
+    text-align: center;
+    padding: 30px 0;
+  }
+  .visionen .container {
+    grid-template-columns: 100%;
+  }
+  .visionen h2 {
+    font-size: 26px;
+    line-height: 37px;
+  }
+  .visionen .bg-image {
+    width: 155px;
+    height: 314px;
+    margin: 0 auto 40px;
+  }
+  .visionen p {
+    margin: 0 auto 30px;
+  }
+  .features .container {
+    grid-template-columns: 100%;
+    gap: 30px;
+    max-width: 320px;
+  }
+  .partners h2 {
+    font-size: 26px;
+    line-height: 37px;
+  }
+  .partners .logos {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .partners .logos img {
+    max-height: 40px;
+  }
+  footer {
+    padding: 30px 0;
+  }
+  footer a {
+    display: block;
+    text-align: center;
+  }
+  .footer-menu {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-menu a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .impressum {
+    padding: 25px 0;
+  }
+  .impressum h1 {
+    font-size: 26px;
+    line-height: 37px;
+  }
+  .kontakt .hero {
+    background-image: none;
+    padding: 50px 0 100px !important;
+  }
+  .kontakt .hero h1 {
+    margin: 0 auto 30px;
+  }
+  .kontakt .hero h3 {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
+  }
+  .kontakt .hero img {
+    display: none;
+  }
+  .kontakt .hero .hero-text::after {
+    top: 20px;
+    width: 184px;
+    height: 25px;
+    left: calc(50% - 90px);
+  }
+  .kontakt .hero p::after {
+    display: block;
+    margin: 5px auto 25px;
+    width: 68px;
+    height: 62px;
+    content: url(assets/images/desktop/arrow.png);
+    transform: scale(0.5);
+  }
+  .kontakt footer::before {
+    display: block;
+    content: "";
+    background: url(assets/images/desktop/gartenjournal-ipad.jpg) center top
+      no-repeat;
+    background-size: cover;
+    width: 375px;
+    height: 268px;
+    margin: -30px auto 40px;
+  }
+  .projekte h1 {
+    font-size: 26px;
+    line-height: 37px;
+  }
+  .projekte-grid {
+    grid-template-columns: 100%;
+  }
+  .project .container {
+    grid-template-columns: 100%;
+  }
+  .project .container > div:nth-child(1) {
+    order: 1;
+  }
+  .project .container > div:nth-child(2) {
+    order: 3;
+  }
+  .project .container > div:nth-child(3) {
+    order: 2;
+  }
+  .project .container > div:nth-child(4) {
+    order: 4;
+  }
+  .project .container > div:nth-child(3),
+  .project .container > div:nth-child(4) {
+    margin: 0 -30px;
+  }
+  .haus .hero,
+  .garten .hero {
+    background-image: none;
+  }
+  .haus .hero h1,
+  .garten .hero h1 {
+    font-size: 26px;
+    line-height: 37px;
+    max-width: 100%;
+    letter-spacing: 0.5px;
+  }
+  .haus .hero h1 br,
+  .garten .hero h1 br {
+    display: none;
+  }
+  .haus .hero h1 br:last-child {
+    display: block;
+  }
+  .haus .hero img,
+  .garten .hero img {
+    display: none;
+  }
+  .haus .hero img.logo,
+  .garten .hero img.logo,
+  .haus .hero .atf-image img,
+  .garten .hero .atf-image img {
+    display: inline;
+  }
+  .haus .hero .atf-image,
+  .garten .hero .atf-image {
+    display: block;
+    margin: 0 auto 30px;
+  }
+}
