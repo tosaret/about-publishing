@@ -118,6 +118,11 @@ header nav ul ul li {
   background-color: #fff;
 }
 
+.home header nav ul ul li,
+.kontakt header nav ul ul li {
+  background-color: var(--light-green);
+}
+
 header .menu-btn {
   display: none;
 }
