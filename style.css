@@ -115,6 +115,7 @@ header nav li:hover ul {
 
 header nav ul ul li {
   margin: 10px 0;
+  background-color: #fff;
 }
 
 header .menu-btn {
